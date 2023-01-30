@@ -1,0 +1,135 @@
+:root {
+    /* primary */
+    --ffam-primary: 'Kumbh Sans', sans-serif;
+    --fsiz-primary: 18px;
+    --fwei-primary: 400;
+    --fcol-primary: hsl(0, 0%, 59%);
+    /* background*/
+    --bgcol-primary: rgba(0, 0, 0, 1);
+    --bgcoltra-primary: hsl(185, 75%, 39%);
+
+    /* accent */
+    /* font*/
+    --ffam-accent: 'Kumbh Sans', sans-serif;
+    --fsiz-accent: 18px;
+    --fwei-accent: 700;
+    --fcol-accent: hsl(229, 23%, 23%);
+    /* background*/
+    --bgcol-accent: rgba(185, 110, 35, 1);
+    --bgcoltra-accent: rgba(185, 110, 35, .5);
+}
+
+* {
+    margin: 0;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.opacity {
+    filter: opacity(50%);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    display: block;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: 
+    url(/images/bg-pattern-top.svg) no-repeat bottom,
+    url(/images/bg-pattern-bottom.svg) no-repeat top;
+    background-color: var(--bgcol-primary);
+}
+
+article {
+    width: 343px;
+    height: 400px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+article span {
+    font-family: var(--ffam-accent);
+    font-weight: var(--fwei-accent);
+    color: var(--fcol-accent);
+}
+
+article p {
+    font-family: var(--ffam-primary);
+    font-weight: var(--fwei-primary);
+    color: var(--fcol-primary);
+}
+
+.top {
+    background-image: url(/images/bg-pattern-card.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
+
+    height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.img {
+    width: 100px;
+    height: 100px;
+    border: 0.3em solid white;
+    border-radius: 50%;
+}
+
+.mid  {
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "c c";
+    gap: .2rem .5rem;
+    padding: 1.4rem;
+}
+
+.mid__a {
+    grid-area: a;
+    text-align: right;
+}
+.mid__b{
+    grid-area: b;
+    text-align: left;
+}
+
+.mid__c{
+    grid-area: c;
+    text-align: center;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 1.4rem 1.4rem 1.4rem 0;
+
+}
+
+.bottom div {
+    text-align: center;
+}
+
+.bottom p {
+    padding: 08.rem;
+    font-size: smaller;
+}
